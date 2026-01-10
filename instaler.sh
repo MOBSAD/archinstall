@@ -98,4 +98,4 @@ sync
 sleep 1
 
 #FAZ REBOOT
-reboot now
+sudo reboot now
