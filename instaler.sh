@@ -63,7 +63,7 @@ export CHSH=yes
 export RUNZSH=no
 
 #REMOVENDO POSSIVEL OHMYZSH E ARQUIVOS ZSH CASO EXISTENTES ANTES DE INSTALAR PARA EVITAR ERROS
-rm -rf "$HOME/.oh-my-zsh" "$HOME/.zshrc" "$HOME/.zsh_history" "$HOME/.shell.pre-oh-my-zsh"
+rm -rf "$HOME/.oh-my-zsh" "$HOME/.zshrc" "$HOME/.shell.pre-oh-my-zsh"
 
 #INSTALANDO OHMYZSH
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
@@ -89,10 +89,9 @@ for i in {10..1}; do
     echo -ne "Reiniciando em ${RED}$i${NC} segundos...\r"
     sleep 1
 done
-echo ""
-
+echo "" 
 #SE REMOVE
-rm -rf "$HOME/archinstall/"
+#rm -rf "$HOME/archinstall/"
 
 sync
 sleep 1
