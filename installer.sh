@@ -25,7 +25,7 @@ warn_msg(){
 install_base(){
   #ATUALIZAÇÕES E INSTALAÇÕES GERAIS
   install_msg "BASE"
-  sudo pacman -Syu python3 kitty zsh neovim git rclone man flameshot npm flatpak winetricks obs-studio zip unzip noto-fonts noto-fonts-emoji wget noto-fonts-extra discord pavucontrol steam fastfetch fakeroot --noconfirm
+  sudo pacman -Syu python3 kitty zsh neovim git rclone man flameshot npm flatpak winetricks obs-studio zip unzip noto-fonts noto-fonts-emoji wget noto-fonts-extra discord pavucontrol steam fastfetch fakeroot grim slurp wl-clipboard swappy --noconfirm
   sudo pacman -S --needed flatpak
 
 }
@@ -44,7 +44,7 @@ install_spotx(){
   #SPOTIFY SCRIPT
   install_msg "SPOTX"
   curl -sSL https://spotx-official.github.io/run.sh -o spotx.sh
-  bash spotx.sh -f
+  bash spotx.sh -f -p
   rm spotx.sh
 }
 
