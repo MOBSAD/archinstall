@@ -37,7 +37,9 @@ install_flatpak_applications(){
     com.spotify.Client \
     org.vinegarhq.Sober \
     com.github.tchx84.Flatseal \
-    org.kde.kdenlive
+    org.kde.kdenlive \
+    io.missioncenter.MissionCenter \
+    com.vysp3r.ProtonPlus
 }
 
 install_spotx(){
