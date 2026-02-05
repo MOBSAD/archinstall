@@ -25,13 +25,13 @@ warn_msg(){
 install_base(){
   #ATUALIZAÇÕES E INSTALAÇÕES GERAIS
   install_msg "BASE"
-  sudo pacman -Syu python3 kitty zsh neovim git rclone man flameshot npm flatpak winetricks obs-studio zip unzip noto-fonts noto-fonts-emoji wget noto-fonts-extra discord pavucontrol steam fastfetch fakeroot grim slurp wl-clipboard swappy --noconfirm
+  sudo pacman -Syu python3 kitty zsh neovim git rclone man flameshot npm flatpak winetricks zip unzip noto-fonts noto-fonts-emoji wget noto-fonts-extra pavucontrol steam fastfetch fakeroot grim slurp wl-clipboard swappy --noconfirm
   sudo pacman -S --needed flatpak
 
 }
 
 install_flatpak_applications(){
-  #INSTALAÇÕES FLATHUB (SPOTIFY, SOBER [ROBLOX], FLATSEAL, KDENLIVE)
+  #INSTALAÇÕES FLATHUB (SPOTIFY, SOBER [ROBLOX], FLATSEAL, KDENLIVE, MISSIONCENTER, OBS)
   install_msg "APLICAÇÕES FLATPAK"
   flatpak install -y flathub \
     com.spotify.Client \
@@ -39,14 +39,15 @@ install_flatpak_applications(){
     com.github.tchx84.Flatseal \
     org.kde.kdenlive \
     io.missioncenter.MissionCenter \
-    com.vysp3r.ProtonPlus
+    com.vysp3r.ProtonPlus \
+    com.obsproject.Studio
 }
 
 install_spotx(){
   #SPOTIFY SCRIPT
   install_msg "SPOTX"
   curl -sSL https://spotx-official.github.io/run.sh -o spotx.sh
-  bash spotx.sh -f -p
+  bash spotx.sh -f
   rm spotx.sh
 }
 
@@ -99,7 +100,7 @@ install_yay(){
 update_yay(){
   #ATUALIZA O YAY
   install_msg "UPDATES NO YAY"
-  yay -Syu --noconfirm
+  yay -Syu thorium-browser --noconfirm
 }
 
 
